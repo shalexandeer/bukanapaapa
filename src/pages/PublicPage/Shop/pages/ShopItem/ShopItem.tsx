@@ -8,7 +8,6 @@ import BeginnerImage from "../../../../../assets/images/beginner.png";
 import Button from "../../../../../components/elements/Button";
 import {
   MinusIcon,
-  PlusCircleIcon,
   PlusIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";

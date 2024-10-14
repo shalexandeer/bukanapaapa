@@ -22,8 +22,7 @@ const RegisterForm: React.FC = () => {
   const [hideEye, dispatch] = useReducer((state: boolean) => !state, true);
   const [agreeTerms, setAgreeTerms] = useState<boolean>(false);
 
-  const {
-    mutate: doLogin,
+  const { 
     isPending,
     isSuccess,
   } = useAdminLogin({
@@ -33,9 +32,7 @@ const RegisterForm: React.FC = () => {
         login(data);
       }, 1500);
     },
-    onError: (data) => {
-      toast.error(data?.message);
-      console.log(data);
+    onError: () => {
     },
   });
 
@@ -60,7 +57,7 @@ const RegisterForm: React.FC = () => {
     confirmPasswordValue &&
     agreeTerms;
 
-  const onSubmit: SubmitHandler<RegisterFormInputs> = (data) => {
+  const onSubmit: SubmitHandler<RegisterFormInputs> = () => {
     // Handle the registration process
   };
 

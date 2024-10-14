@@ -29,7 +29,7 @@ export function useAdminLogout(
   const { mutate, isPending, isSuccess } = useMutation<void, unknown, void>({
     mutationFn: async () => {
       const response = await AuthServices.logout();
-      return response.data;
+      return response?.data;
     },
     onSuccess: options?.onSuccess,
     onError: options?.onError,

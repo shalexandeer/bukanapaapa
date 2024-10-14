@@ -22,8 +22,6 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
 
   const {
     mutate: adminLogout,
-    isPending,
-    isSuccess,
   } = useAdminLogout({
     onSuccess: () => {
       toast.success("Berhasil keluar");

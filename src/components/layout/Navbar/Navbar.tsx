@@ -9,12 +9,12 @@ import {
 import { MenuLinkNavbar } from "../../../constants/navigation";
 
 const Navbar = () => {
-  const { token, user, logout } = useAuth();
+  const { token, logout } = useAuth();
 
   const handleClickDropdown = () => {
     const elem = document.activeElement;
     if (elem) {
-      elem?.blur();
+      (elem as HTMLElement)?.blur();
     }
   };
 

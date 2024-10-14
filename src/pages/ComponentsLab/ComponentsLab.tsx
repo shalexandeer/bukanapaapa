@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Breadcrumb from "../../components/elements/Breadcrumb";
 import Button from "../../components/elements/Button";
 import {
@@ -13,7 +13,6 @@ import {
   ModalBox,
 } from "../../components/elements/Modal/Modal";
 import Select from "../../components/elements/Select/Select";
-import { FunnelIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 import BeginnerImage from "../../assets/images/beginner.png";
 import CardEvent from "../PublicPage/Events/components/CardEvent";
@@ -23,7 +22,7 @@ import PageHeader from "../../components/templates/PageHeader/PageHeader";
 
 const ComponentsLab = () => {
   const modalExamples = useRef<HTMLDialogElement>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [, setIsModalOpen] = useState(false);
 
   const options = [
     { value: "1", label: "Option 1" },
@@ -50,13 +49,13 @@ const ComponentsLab = () => {
     }
   };
 
-  const categories = [
-    { name: "All Category" },
-    { name: "Item Mall", variant: "custom" },
-    { name: "Item kedua", variant: "custom" },
-    { name: "Item ketiga", variant: "custom" },
-    { name: "Item keempat", variant: "custom" },
-  ];
+  // const categories = [
+  //   { name: "All Category" },
+  //   { name: "Item Mall", variant: "custom" },
+  //   { name: "Item kedua", variant: "custom" },
+  //   { name: "Item ketiga", variant: "custom" },
+  //   { name: "Item keempat", variant: "custom" },
+  // ];
 
   return (
     <div className="container-layout my-8 space-y-12 font-['Poppins']">

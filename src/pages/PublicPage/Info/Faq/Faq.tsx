@@ -1,5 +1,4 @@
 import Breadcrumb from "../../../../components/elements/Breadcrumb";
-import PageHeader from "./../../../../components/templates/PageHeader/PageHeader";
 
 const Faq = () => {
   const paths = [

@@ -55,6 +55,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             </span>
           )}
           <Component
+          // @ts-ignore
             ref={ref}
             placeholder={placeholder}
             readOnly={readonlyPlaceholder}

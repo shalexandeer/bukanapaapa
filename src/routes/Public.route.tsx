@@ -1,7 +1,7 @@
-import React, { lazy, useEffect } from "react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import CommonLayout from "../components/layout/UserLayout";
-import { useAuth } from "../provider/AuthProvider";
+import React, { lazy} from "react";
+import { Route, Routes } from "react-router-dom";
+// import CommonLayout from "../components/layout/UserLayout";
+// import { useAuth } from "../provider/AuthProvider";
 
 const Home = lazy(() => import("../pages/PublicPage/Home"));
 const DownloadPage = lazy(

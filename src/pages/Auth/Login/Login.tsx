@@ -1,6 +1,4 @@
 import LoginForm from "../../../components/forms/LoginForm/LoginForm";
-import backgroundImage from "../../../assets/images/background.png";
-import suratkuLogo from "../../../assets/images/logo.png";
 import Button from "../../../components/elements/Button";
 import GoogleLogo from "../../../assets/icons/GoogleLogo.svg";
 import SealLogo from "../../../assets/SEALogo.png";

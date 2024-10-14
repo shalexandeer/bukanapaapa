@@ -1,6 +1,6 @@
-import React, { lazy, useEffect } from "react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { useAuth } from "../provider/AuthProvider";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+// import { useAuth } from "../provider/AuthProvider";
 import UserLayout from "../components/layout/UserLayout";
 import UserInformation from "../pages/Protected/UserInformation";
 

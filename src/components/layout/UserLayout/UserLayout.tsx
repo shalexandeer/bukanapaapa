@@ -1,14 +1,4 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-import LogoSuratku from "../../../assets/LogoSuratku.png";
-import UserDropdown from "../../templates/UserDropdown";
-import {
-  Bars3CenterLeftIcon,
-  BuildingOfficeIcon,
-  ClipboardDocumentListIcon,
-  EnvelopeOpenIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/24/solid";
-import { useAuth } from "../../../provider/AuthProvider";
 import { Card, CardBody } from "../../elements/Card/Card";
 import Button from "../../elements/Button";
 import {
@@ -42,7 +32,7 @@ const sidebarLinks = [
 ];
 
 const UserLayout = () => {
-  const { user } = useAuth();
+  // const {} = useAuth();
   const location = useLocation();
 
   // Find the current sidebar link based on the current location

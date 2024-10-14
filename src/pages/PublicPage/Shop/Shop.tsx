@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import PageHeader from "../../../components/templates/PageHeader/PageHeader";
 import CardShop from "./components/CardShop";
 import BeginnerImage from "../../../assets/images/beginner.png";
@@ -6,7 +7,7 @@ import { cartListState } from "../../../store/cart_recoil";
 import toast from "react-hot-toast";
 
 const Shop = () => {
-  const [cartItems, setCartItems] = useRecoilState(cartListState);
+  const [, setCartItems] = useRecoilState(cartListState);
 
   const paths = [
     {

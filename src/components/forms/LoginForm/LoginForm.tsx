@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useReducer, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -5,7 +6,6 @@ import { loginSchema } from "./schema";
 import Input from "../../elements/Input";
 import EyePassword from "../../templates/EyePassword";
 import Button from "../../elements/Button";
-import { LockClosedIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { useAuth } from "../../../provider/AuthProvider";
 import { useAdminLogin } from "../../../service/Auth/Auth.query";
 import toast from "react-hot-toast";
@@ -21,7 +21,6 @@ const LoginForm: React.FC = () => {
   const [remember, setRemember] = useState<boolean>(false);
 
   const {
-    mutate: doLogin,
     isPending,
     isSuccess,
   } = useAdminLogin({
@@ -31,9 +30,8 @@ const LoginForm: React.FC = () => {
         login(data);
       }, 1500);
     },
-    onError: (data) => {
-      toast.error(data?.message);
-      console.log(data);
+    onError: () => {
+      // toast.error(data?.message);
     },
   });
 
@@ -53,7 +51,7 @@ const LoginForm: React.FC = () => {
   const allInputsFilled = usernameValue && passwordValue;
 
   // TODO: handle submit correctly using auth provider
-  const onSubmit: SubmitHandler<LoginFormInputs> = (data) => {
+  const onSubmit: SubmitHandler<LoginFormInputs> = () => {
     // doLogin(data);
   };
 

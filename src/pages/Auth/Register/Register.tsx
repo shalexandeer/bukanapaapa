@@ -1,6 +1,3 @@
-import LoginForm from "../../../components/forms/LoginForm/LoginForm";
-import backgroundImage from "../../../assets/images/background.png";
-import suratkuLogo from "../../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { Card, CardBody } from "../../../components/elements/Card/Card";
 import Button from "../../../components/elements/Button";

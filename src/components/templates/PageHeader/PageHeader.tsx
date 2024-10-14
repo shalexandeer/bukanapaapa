@@ -28,7 +28,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   categories,
   className,
 }) => {
-  const [activeCategory, setActiveCategory] = useState(0);
+  const [activeCategory, ] = useState(0);
   const navigate = useNavigate();
   return (
     <div className={`mt-5 self-stretch ${className}`}>

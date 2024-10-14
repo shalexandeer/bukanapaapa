@@ -10,7 +10,6 @@ import SectionHeader from "../../../components/templates/SectionHeader/SectionHe
 import CardEvent from "../Events/components/CardEvent";
 import Marquee from "./components/Marquee";
 import CardShop from "../Shop/components/CardShop";
-import { MagicCard } from "../../../components/templates/MagicCard/MagicCard";
 import GradualSpacing from "../../../components/templates/GradualSpacing/GradualSpacing";
 import { FadeText } from "../../../components/templates/FadeText/FadeText";
 
