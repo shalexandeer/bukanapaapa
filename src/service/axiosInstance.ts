@@ -1,5 +1,5 @@
 // src/api/axiosInstance.ts
-import axios from "axios";
+import  axios, { InternalAxiosRequestConfig  } from "axios";
 import { isTokenExpired } from "../utils/auth";
 import { BASE_URL } from "./url";
 import { setAuthLocalStorageData } from "../utils/storage";
@@ -11,7 +11,7 @@ const axiosInstance = axios.create({
   },
 });
 
-axiosInstance.interceptors.request.use(async (config) => {
+axiosInstance.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
   let token = localStorage.getItem("access_token"); // or wherever you store the token
 
   if (token && isTokenExpired(token)) {
@@ -24,7 +24,7 @@ axiosInstance.interceptors.request.use(async (config) => {
     }
   }
 
-  if (token) {
+  if (token && config.headers) {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
